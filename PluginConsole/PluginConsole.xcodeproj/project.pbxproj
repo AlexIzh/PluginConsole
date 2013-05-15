@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F6E690A1743F443006B46A0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E69091743F443006B46A0 /* AppKit.framework */; };
+		1F6E690C1743F443006B46A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E690B1743F443006B46A0 /* Foundation.framework */; };
+		1F6E69121743F443006B46A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F6E69101743F443006B46A0 /* InfoPlist.strings */; };
+		1F6E69151743F443006B46A0 /* PluginConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E69141743F443006B46A0 /* PluginConsole.m */; };
+		1F8BF0FA17442FBB005D984B /* LogClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BF0F917442FBB005D984B /* LogClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F6E69061743F443006B46A0 /* PluginConsole.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6E69091743F443006B46A0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1F6E690B1743F443006B46A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1F6E690F1743F443006B46A0 /* PluginConsole-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PluginConsole-Info.plist"; sourceTree = "<group>"; };
+		1F6E69111743F443006B46A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1F6E69131743F443006B46A0 /* PluginConsole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginConsole.h; sourceTree = "<group>"; };
+		1F6E69141743F443006B46A0 /* PluginConsole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginConsole.m; sourceTree = "<group>"; };
+		1F6E69161743F443006B46A0 /* PluginConsole-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PluginConsole-Prefix.pch"; sourceTree = "<group>"; };
+		1F8BF0F817442FBB005D984B /* LogClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogClient.h; path = Client/LogClient.h; sourceTree = "<group>"; };
+		1F8BF0F917442FBB005D984B /* LogClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogClient.m; path = Client/LogClient.m; sourceTree = "<group>"; };
+		1FF5F377174416D30060D217 /* DVTFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
+		1FF5F378174416D30060D217 /* DVTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
+		1FF5F379174416D30060D217 /* IDEFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
+		1FF5F37A174416D30060D217 /* IDEKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
+		1FF5F37B174416D30060D217 /* IDESourceEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F6E69031743F443006B46A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6E690A1743F443006B46A0 /* AppKit.framework in Frameworks */,
+				1F6E690C1743F443006B46A0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F6E68FD1743F443006B46A0 = {
+			isa = PBXGroup;
+			children = (
+				1F6E690D1743F443006B46A0 /* PluginConsole */,
+				1F6E69081743F443006B46A0 /* Frameworks */,
+				1F6E69071743F443006B46A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F6E69071743F443006B46A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F6E69061743F443006B46A0 /* PluginConsole.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F6E69081743F443006B46A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F6E69091743F443006B46A0 /* AppKit.framework */,
+				1F6E690B1743F443006B46A0 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F6E690D1743F443006B46A0 /* PluginConsole */ = {
+			isa = PBXGroup;
+			children = (
+				1F8BF0F717442F96005D984B /* Client */,
+				1FF5F376174416D30060D217 /* XcodeClasses */,
+				1F6E69131743F443006B46A0 /* PluginConsole.h */,
+				1F6E69141743F443006B46A0 /* PluginConsole.m */,
+				1F6E690E1743F443006B46A0 /* Supporting Files */,
+			);
+			path = PluginConsole;
+			sourceTree = "<group>";
+		};
+		1F6E690E1743F443006B46A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F6E690F1743F443006B46A0 /* PluginConsole-Info.plist */,
+				1F6E69101743F443006B46A0 /* InfoPlist.strings */,
+				1F6E69161743F443006B46A0 /* PluginConsole-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F8BF0F717442F96005D984B /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				1F8BF0F817442FBB005D984B /* LogClient.h */,
+				1F8BF0F917442FBB005D984B /* LogClient.m */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		1FF5F376174416D30060D217 /* XcodeClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1FF5F377174416D30060D217 /* DVTFoundation.h */,
+				1FF5F378174416D30060D217 /* DVTKit.h */,
+				1FF5F379174416D30060D217 /* IDEFoundation.h */,
+				1FF5F37A174416D30060D217 /* IDEKit.h */,
+				1FF5F37B174416D30060D217 /* IDESourceEditor.h */,
+			);
+			path = XcodeClasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F6E69051743F443006B46A0 /* PluginConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F6E69191743F443006B46A0 /* Build configuration list for PBXNativeTarget "PluginConsole" */;
+			buildPhases = (
+				1F6E69021743F443006B46A0 /* Sources */,
+				1F6E69031743F443006B46A0 /* Frameworks */,
+				1F6E69041743F443006B46A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginConsole;
+			productName = PluginConsole;
+			productReference = 1F6E69061743F443006B46A0 /* PluginConsole.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F6E68FE1743F443006B46A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Александр Северьянов";
+			};
+			buildConfigurationList = 1F6E69011743F443006B46A0 /* Build configuration list for PBXProject "PluginConsole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1F6E68FD1743F443006B46A0;
+			productRefGroup = 1F6E69071743F443006B46A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F6E69051743F443006B46A0 /* PluginConsole */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F6E69041743F443006B46A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6E69121743F443006B46A0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F6E69021743F443006B46A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6E69151743F443006B46A0 /* PluginConsole.m in Sources */,
+				1F8BF0FA17442FBB005D984B /* LogClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F6E69101743F443006B46A0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F6E69111743F443006B46A0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F6E69171743F443006B46A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1F6E69181743F443006B46A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F6E691A1743F443006B46A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PluginConsole/PluginConsole-Prefix.pch";
+				INFOPLIST_FILE = "PluginConsole/PluginConsole-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		1F6E691B1743F443006B46A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PluginConsole/PluginConsole-Prefix.pch";
+				INFOPLIST_FILE = "PluginConsole/PluginConsole-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F6E69011743F443006B46A0 /* Build configuration list for PBXProject "PluginConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F6E69171743F443006B46A0 /* Debug */,
+				1F6E69181743F443006B46A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F6E69191743F443006B46A0 /* Build configuration list for PBXNativeTarget "PluginConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F6E691A1743F443006B46A0 /* Debug */,
+				1F6E691B1743F443006B46A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F6E68FE1743F443006B46A0 /* Project object */;
+}
