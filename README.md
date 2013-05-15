@@ -13,6 +13,7 @@ Copy `Client` folder to your plugin and add LogClient.h to your .pch file. And t
 When you debug your plugin, click to `Show Plugins Log` button and you will see debug information from your plugin.
 
 ![PC_ss01.png](http://cl.ly/image/2Y0U1t1j1L2A/Screen%20Shot%202013-05-16%20at%202.43.45.png)
+![PC_ss02.png](http://cl.ly/image/0G2M0R0q443Y/Screen%20Shot%202013-05-16%20at%203.06.21.png)
 
 ## License
 *PluginConsole* is released under the **MIT License**, see *LICENSE.txt*.
