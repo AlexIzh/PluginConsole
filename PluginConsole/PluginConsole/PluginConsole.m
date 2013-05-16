@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
             [button setButtonType:NSOnOffButton];
             [button setBezelStyle:NSSmallSquareBezelStyle];
             [button setFont:[NSFont fontWithName:@"Helvetica" size:9.f]];
-            [button setTitle:@"Show Plugins Logs"];
+            [button setTitle:@"Show Log of Plugins"];
             button.target = self;
             button.action = @selector(buttonAction:);
             [scopeBar addViewOnRight:button];
@@ -76,7 +76,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
         if (scopeBar) {
             for (NSButton *button in scopeBar.subviews) {
                 if ([button respondsToSelector:@selector(title)]) {
-                    if ([button.title isEqualToString:@"Show Plugins Logs"]) {
+                    if ([button.title isEqualToString:@"Show Log of Plugins"]) {
                         [button setState:sender.state];
                         break;
                     }
