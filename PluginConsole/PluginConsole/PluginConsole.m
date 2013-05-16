@@ -30,6 +30,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 - (id)init
 {
     if (self = [super init]) {
+        _windowsSet = [[NSMutableSet alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeNotification:) name:NSWindowDidUpdateNotification object:nil];
     }
     return self;
@@ -38,6 +39,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 - (void)activeNotification:(NSNotification *)notif
 {
     for (NSWindow *window in [NSApp windows]) {
+        if ([_windowsSet containsObject:window]) continue;
         NSView *contentView = window.contentView;
         IDEConsoleTextView *console = [self consoleViewInMainView:contentView];
         DVTScopeBarView *scopeBar = nil;
@@ -57,6 +59,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
             button.target = self;
             button.action = @selector(buttonAction:);
             [scopeBar addViewOnRight:button];
+            [_windowsSet addObject:window];
         }
     }
 }
@@ -135,6 +138,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 
 - (void)dealloc
 {
+    [_windowsSet release];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }

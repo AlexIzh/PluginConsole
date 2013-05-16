@@ -9,5 +9,7 @@
 #import <AppKit/AppKit.h>
 
 @interface PluginConsole : NSObject
-
+{
+    NSMutableSet        *_windowsSet;
+}
 @end
