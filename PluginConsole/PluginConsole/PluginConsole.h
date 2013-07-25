@@ -11,5 +11,6 @@
 @interface PluginConsole : NSObject
 {
     NSMutableSet        *_windowsSet;
+    NSMutableSet        *_buttons;
 }
 @end

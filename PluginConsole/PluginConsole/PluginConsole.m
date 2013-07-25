@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 {
     if (self = [super init]) {
         _windowsSet = [[NSMutableSet alloc] init];
+        _buttons = [[NSMutableSet alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeNotification:) name:NSWindowDidUpdateNotification object:nil];
     }
     return self;
@@ -60,6 +61,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
             button.action = @selector(buttonAction:);
             [scopeBar addViewOnRight:button];
             [_windowsSet addObject:window];
+            [_buttons addObject:button];
         }
     }
 }
@@ -67,24 +69,8 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 - (void)buttonAction:(NSButton *)sender
 {
     for (NSWindow *window in [NSApp windows]) {
-        NSView *contentView = window.contentView;
-        IDEConsoleTextView *console = [self consoleViewInMainView:contentView];
-        DVTScopeBarView *scopeBar = nil;
-        NSView *parent = console.superview;
-        while (!scopeBar) {
-            if (!parent) break;
-            scopeBar = [self scopeBarViewInView:parent];
-            parent = parent.superview;
-        }
-        if (scopeBar) {
-            for (NSButton *button in scopeBar.subviews) {
-                if ([button respondsToSelector:@selector(title)]) {
-                    if ([button.title isEqualToString:@"Show Log of Plugins"]) {
-                        [button setState:sender.state];
-                        break;
-                    }
-                }
-            }
+        for (NSButton *btn in _buttons) {
+            [btn setState:sender.state];
         }
     }
     if (sender.state == NSOnState) {
@@ -138,6 +124,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 
 - (void)dealloc
 {
+    [_buttons release];
     [_windowsSet release];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
