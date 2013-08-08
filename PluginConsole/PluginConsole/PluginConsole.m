@@ -32,9 +32,27 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
     if (self = [super init]) {
         _windowsSet = [[NSMutableSet alloc] init];
         _buttons = [[NSMutableSet alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeWindowNotification:) name:NSWindowWillCloseNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeNotification:) name:NSWindowDidUpdateNotification object:nil];
     }
     return self;
+}
+
+- (void)closeWindowNotification:(NSNotification *)note {
+    NSWindow *window = note.object;
+    if (window) {
+        NSButton *button = nil;
+        for (NSButton *btn in _buttons) {
+            if (btn.window == window) {
+                button = btn;
+                break;
+            }
+        }
+        if (button) {
+            [_buttons removeObject:button];
+        }
+        [_windowsSet removeObject:window];
+    }
 }
 
 - (void)activeNotification:(NSNotification *)notif
