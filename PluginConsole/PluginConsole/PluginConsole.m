@@ -69,7 +69,7 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
             parent = parent.superview;
         }
         if (scopeBar) {
-            if (scopeBar.subviews.count > 3) continue;
+//            if (scopeBar.subviews.count > 3) continue;
             NSButton *button = [[[NSButton alloc] initWithFrame:NSMakeRect(10.0f, 10.0f, 100.f, 20.f)] autorelease];
             [button setButtonType:NSOnOffButton];
             [button setBezelStyle:NSSmallSquareBezelStyle];
@@ -127,7 +127,9 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 
 - (DVTScopeBarView *)scopeBarViewInView:(NSView *)view
 {
+    static NSString *str = @"";
     for (NSView *childView in view.subviews) {
+        [[str stringByAppendingFormat:@"\n%@",NSStringFromClass(childView.class) ] writeToFile:@"/Users/aleksandr/Desktop/xcode5.txt" atomically:NO encoding:NSUTF8StringEncoding error:nil];
         if ([childView isKindOfClass:NSClassFromString(@"DVTScopeBarView")]) {
             return (DVTScopeBarView *)childView;
         } else {

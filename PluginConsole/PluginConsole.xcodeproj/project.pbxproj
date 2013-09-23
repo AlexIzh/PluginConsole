@@ -257,12 +257,15 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PluginConsole/PluginConsole-Prefix.pch";
 				INFOPLIST_FILE = "PluginConsole/PluginConsole-Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xcplugin;
 			};
@@ -273,12 +276,15 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PluginConsole/PluginConsole-Prefix.pch";
 				INFOPLIST_FILE = "PluginConsole/PluginConsole-Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xcplugin;
 			};
