@@ -8,7 +8,7 @@ Build this plugin, then the plugin will automatically be installed in `~/Library
 Relaunch Xcode and PluginConsole will make your life easier.
 
 ##Xcode 5
-If you use Xcode 4 then you should not uploaded latest commit. Latest commit uses for Xcode 5 only and Scheme was be updated.
+If you use Xcode 4 then you should not download latest commit. Latest commit uses for Xcode 5 only and Scheme was be updated.
 
 ## Usage
 Copy `Client` folder to your plugin and add LogClient.h to your .pch file. And then use PluginLog() and PluginLogWithName() for log to the standart console.
