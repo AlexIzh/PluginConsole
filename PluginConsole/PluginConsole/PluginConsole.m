@@ -70,7 +70,10 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
         }
         if (scopeBar) {
 //            if (scopeBar.subviews.count > 3) continue;
-            NSButton *button = [[[NSButton alloc] initWithFrame:NSMakeRect(10.0f, 10.0f, 100.f, 20.f)] autorelease];
+            NSButton *button = [[NSButton alloc] initWithFrame:NSMakeRect(10.0f, 10.0f, 100.f, 20.f)];
+#if  !__has_feature(objc_arc)
+            [button autorelease];
+#endif
             [button setButtonType:NSOnOffButton];
             [button setBezelStyle:NSSmallSquareBezelStyle];
             [button setFont:[NSFont fontWithName:@"Helvetica" size:9.f]];
@@ -144,8 +147,10 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 
 - (void)dealloc
 {
+#if  !__has_feature(objc_arc)
     [_buttons release];
     [_windowsSet release];
+#endif
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }
