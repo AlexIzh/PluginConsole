@@ -128,11 +128,8 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
     return nil;
 }
 
-- (DVTScopeBarView *)scopeBarViewInView:(NSView *)view
-{
-    static NSString *str = @"";
+- (DVTScopeBarView *)scopeBarViewInView:(NSView *)view {
     for (NSView *childView in view.subviews) {
-        [[str stringByAppendingFormat:@"\n%@",NSStringFromClass(childView.class) ] writeToFile:@"/Users/aleksandr/Desktop/xcode5.txt" atomically:NO encoding:NSUTF8StringEncoding error:nil];
         if ([childView isKindOfClass:NSClassFromString(@"DVTScopeBarView")]) {
             return (DVTScopeBarView *)childView;
         } else {
