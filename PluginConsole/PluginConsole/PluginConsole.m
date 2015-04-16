@@ -89,10 +89,8 @@ typedef NS_ENUM(NSInteger, ConsoleMode) {
 
 - (void)buttonAction:(NSButton *)sender
 {
-    for (NSWindow *window in [NSApp windows]) {
-        for (NSButton *btn in _buttons) {
-            [btn setState:sender.state];
-        }
+    for (NSButton *btn in _buttons) {
+        [btn setState:sender.state];
     }
     if (sender.state == NSOnState) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addLog:) name:PluginLoggerShouldLogNotification object:nil];
